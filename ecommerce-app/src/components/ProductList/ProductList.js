@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ProductCard from "../ProductCard/ProductCard";
+import "./ProductList.css";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -18,7 +20,13 @@ const ProductList = () => {
     fetchData();
   }, []);
 
-  return <div></div>;
+  return (
+    <div className="product-list">
+      {products.map((product) => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+  );
 };
 
 export default ProductList;
