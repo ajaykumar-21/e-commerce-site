@@ -22,7 +22,6 @@ function App() {
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
-    console.log(cart);
   };
   return (
     <div className="App">

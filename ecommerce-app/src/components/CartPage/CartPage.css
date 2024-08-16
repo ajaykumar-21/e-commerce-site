@@ -5,10 +5,16 @@
 }
 
 .cart-page-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .cart-page-heading {
-    margin-left: 70px;
+  margin-left: 120px;
+}
+
+.empty-cart {
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
 }

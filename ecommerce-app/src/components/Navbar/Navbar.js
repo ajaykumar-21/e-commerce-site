@@ -8,7 +8,7 @@ const Navbar = ({ cart }) => {
         <h4>E-Commerce</h4>
       </div>
       <div>
-        <div>Cart:{cart.length} items</div>
+        <div className="navBar-items">Cart: {cart.length} items</div>
       </div>
     </nav>
   );

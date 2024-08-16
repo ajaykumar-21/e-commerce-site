@@ -10,9 +10,15 @@ const ProductCard = ({ product, addToCart }) => {
         width="100%"
         height="200px"
       />
-      <h4>{product.title}</h4>
-      <p>${product.price}</p>
-      <button onClick={() => addToCart(product)}>Add to Cart</button>
+      <div className="card-title">
+        <h5>{product.title}</h5>
+      </div>
+      <div className="card-price">
+        <p className="card-price">${product.price}</p>
+      </div>
+      <button onClick={() => addToCart(product)} className="btn-add-to-cart">
+        Add to Cart
+      </button>
     </div>
   );
 };

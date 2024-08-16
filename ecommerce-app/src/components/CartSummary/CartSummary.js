@@ -10,7 +10,9 @@ const CartSummary = ({ cart }) => {
   return (
     <div className="cart-summary-conatiner">
       <div className="cart-summary-wrapper">
-        <h2>Cart Summary</h2>
+        <div className="cart-summary-heading">
+          <h2>Cart Summary</h2>
+        </div>
         <div className="cart-total">
           <p>
             {" "}

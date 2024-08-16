@@ -6,7 +6,23 @@
   width: 100px;
   height: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  input {
-    width: 35px;
-  }
+}
+
+.cart-title {
+  height: 75px;
+  font-size: 15px;
+  margin-bottom: -1px;
+}
+
+.cart-price {
+  font-size: large;
+  font-weight: 700;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
 }
