@@ -1,6 +1,7 @@
 import "./App.css";
 import ProductList from "./components/ProductList/ProductList";
 import Navbar from "./components/Navbar/Navbar";
+import CartPage from "./components/CartPage/CartPage";
 import { useState } from "react";
 
 function App() {
@@ -26,7 +27,12 @@ function App() {
   return (
     <div className="App">
       <Navbar cart={cart} />
-      <ProductList addToCart={addToCart} />
+      <div>
+        <ProductList addToCart={addToCart} />
+      </div>
+      <div>
+        <CartPage cart={cart} />
+      </div>
     </div>
   );
 }
