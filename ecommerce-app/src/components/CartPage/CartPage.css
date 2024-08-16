@@ -1,0 +1,14 @@
+.cart-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cart-page-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-page-heading {
+    margin-left: 70px;
+}

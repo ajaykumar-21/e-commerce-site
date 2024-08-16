@@ -1,4 +1,5 @@
 import React from "react";
+import "./CartSummary.css";
 
 const CartSummary = ({ cart }) => {
   const subtotal = cart.reduce(
@@ -7,10 +8,21 @@ const CartSummary = ({ cart }) => {
   );
 
   return (
-    <div>
-      <h3>Cart Summary</h3>
-      <p>SubTotal: ${subtotal.toFixed(2)}</p>
-      <p>Total: ${subtotal.toFixed(2)}</p>
+    <div className="cart-summary-conatiner">
+      <div className="cart-summary-wrapper">
+        <h2>Cart Summary</h2>
+        <div className="cart-total">
+          <p>
+            {" "}
+            <span className="sub-heading">SubTotal:</span>{" "}
+            <span className="total-price">${subtotal.toFixed(2)} </span>
+          </p>
+          <p>
+            <span className="sub-heading">Total:</span>{" "}
+            <span className="total-price">${subtotal.toFixed(2)}</span>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
