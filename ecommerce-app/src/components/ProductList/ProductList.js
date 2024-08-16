@@ -3,7 +3,7 @@ import axios from "axios";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
 
-const ProductList = () => {
+const ProductList = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const ProductList = () => {
   return (
     <div className="product-list">
       {products.map((product) => (
-        <ProductCard product={product} />
+        <ProductCard key={product.id} product={product} addToCart={addToCart} />
       ))}
     </div>
   );

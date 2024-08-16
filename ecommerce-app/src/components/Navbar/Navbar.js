@@ -1,14 +1,14 @@
 import React from "react";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   return (
     <nav className="navBar">
       <div>
         <h4>E-Commerce</h4>
       </div>
       <div>
-        <div>items</div>
+        <div>Cart:{cart.length} items</div>
       </div>
     </nav>
   );

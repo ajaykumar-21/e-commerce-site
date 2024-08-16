@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductCard.css";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, addToCart }) => {
   return (
     <div className="card-wrapper">
       <img
@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
       />
       <h4>{product.title}</h4>
       <p>${product.price}</p>
-      <button>Add to Cart</button>
+      <button onClick={() => addToCart(product)}>Add to Cart</button>
     </div>
   );
 };
