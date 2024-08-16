@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartItem.css";
 
-const CartItem = ({ item, updateCart }) => {
+const CartItem = ({ item, updateCart, removeFromCart }) => {
   const handleQantityChange = (e) => {
     updateCart(item.id, parseInt(e.target.value));
   };
@@ -22,6 +22,7 @@ const CartItem = ({ item, updateCart }) => {
         value={item.quantity}
         onChange={handleQantityChange}
       />
+      <button onClick={() => removeFromCart(item.id)}>Remove</button>
     </div>
   );
 };

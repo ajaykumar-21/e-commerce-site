@@ -33,6 +33,11 @@ function App() {
       )
     );
   };
+
+  const removeFromCart = (productId) => {
+    const removedItem = cart.filter((item) => item.id !== productId);
+    setCart(removedItem);
+  };
   return (
     <div className="App">
       <Navbar cart={cart} />
@@ -40,7 +45,11 @@ function App() {
         <ProductList addToCart={addToCart} />
       </div>
       <div>
-        <CartPage cart={cart} updateCart={updateCart} />
+        <CartPage
+          cart={cart}
+          updateCart={updateCart}
+          removeFromCart={removeFromCart}
+        />
       </div>
     </div>
   );
