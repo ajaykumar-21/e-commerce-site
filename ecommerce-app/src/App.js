@@ -23,6 +23,16 @@ function App() {
       setCart([...cart, { ...product, quantity: 1 }]);
     }
   };
+
+  const updateCart = (productId, quantity) => {
+    setCart(
+      cart.map((item) =>
+        item.id === productId
+          ? { ...item, quantity: Math.max(1, quantity) }
+          : item
+      )
+    );
+  };
   return (
     <div className="App">
       <Navbar cart={cart} />
@@ -30,7 +40,7 @@ function App() {
         <ProductList addToCart={addToCart} />
       </div>
       <div>
-        <CartPage cart={cart} />
+        <CartPage cart={cart} updateCart={updateCart} />
       </div>
     </div>
   );

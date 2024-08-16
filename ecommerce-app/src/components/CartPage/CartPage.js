@@ -3,7 +3,7 @@ import CartSummary from "../CartSummary/CartSummary";
 import CartItem from "../CartItem/CartItem";
 import "./CartPage.css";
 
-const CartPage = ({ cart }) => {
+const CartPage = ({ cart, updateCart }) => {
   return (
     <div className="cart-page-container">
       <h2 className="cart-page-heading">Shopping Cart</h2>
@@ -12,7 +12,7 @@ const CartPage = ({ cart }) => {
           <>
             <div className="cart-item-wrapper">
               {cart.map((item) => (
-                <CartItem key={item.id} item={item} />
+                <CartItem key={item.id} item={item} updateCart={updateCart} />
               ))}
             </div>
             <CartSummary cart={cart} />

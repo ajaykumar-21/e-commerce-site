@@ -1,7 +1,10 @@
 import React from "react";
 import "./CartItem.css";
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, updateCart }) => {
+  const handleQantityChange = (e) => {
+    updateCart(item.id, parseInt(e.target.value));
+  };
   return (
     <div className="cart-item-container">
       <div>
@@ -13,7 +16,12 @@ const CartItem = ({ item }) => {
       <div className="cart-price">
         <p>${item.price.toFixed(2)}</p>
       </div>
-      <input type="number" min="1" value={item.quantity} />
+      <input
+        type="number"
+        min="1"
+        value={item.quantity}
+        onChange={handleQantityChange}
+      />
     </div>
   );
 };
