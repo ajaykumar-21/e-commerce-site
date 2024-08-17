@@ -16,13 +16,17 @@ const CartItem = ({ item, updateCart, removeFromCart }) => {
       <div className="cart-price">
         <p>${item.price.toFixed(2)}</p>
       </div>
-      <input
-        type="number"
-        min="1"
-        value={item.quantity}
-        onChange={handleQantityChange}
-      />
-      <button onClick={() => removeFromCart(item.id)}>Remove</button>
+      <div className="btn-input-wrapper">
+        <input
+          type="number"
+          min="1"
+          value={item.quantity}
+          onChange={handleQantityChange}
+        />
+        <button onClick={() => removeFromCart(item.id)} className="remove-btn">
+          Remove
+        </button>
+      </div>
     </div>
   );
 };
