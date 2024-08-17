@@ -20,7 +20,7 @@ const CartPage = ({ cart, updateCart, removeFromCart }) => {
                 />
               ))}
             </div>
-            <CartSummary cart={cart} />
+            <CartSummary cart={cart} discountPercentage={10} />
           </>
         ) : (
           <div className="empty-cart">
