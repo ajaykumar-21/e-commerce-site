@@ -2,6 +2,7 @@ import React from "react";
 import "./CartSummary.css";
 
 const CartSummary = ({ cart }) => {
+  // Calculates the subtotal for all items in the cart.
   const subtotal = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0

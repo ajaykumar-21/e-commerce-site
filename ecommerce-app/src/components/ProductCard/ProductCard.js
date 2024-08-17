@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductCard.css";
 
 const ProductCard = ({ product, addToCart }) => {
+  // Card for all the items of product
   return (
     <div className="card-wrapper">
       <img

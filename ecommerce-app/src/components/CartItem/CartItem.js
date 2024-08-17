@@ -2,8 +2,9 @@ import React from "react";
 import "./CartItem.css";
 
 const CartItem = ({ item, updateCart, removeFromCart }) => {
+  //Handles the change in quantity for a specific item in the cart.
   const handleQantityChange = (e) => {
-    updateCart(item.id, parseInt(e.target.value));
+    updateCart(item.id, parseInt(e.target.value)); //This function updates the cart by calling the updateCart function with the item's ID and the new quantity. The quantity is parsed as an integer from the input field value.
   };
   return (
     <div className="cart-item-container">
